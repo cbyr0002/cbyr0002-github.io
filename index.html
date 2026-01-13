@@ -78,23 +78,28 @@
             50% { transform: translate(30px, 20px) rotate(10deg); }
         }
 
-        /* Timeline Logic */
-        .timeline-line {
+        /* Timeline Logic - Updated to Sidebar Style */
+        .timeline-container {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .timeline-line-vertical {
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background-color: #2A9D8F;
-            opacity: 0.3;
+            left: 25px; /* Aligned with circle center */
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: #E9C46A; /* Accent color line */
+            opacity: 0.4;
             z-index: 0;
         }
         
-        /* Stable Orbit System */
+        /* Stable Orbit System - Updated Sizes */
         .orbit-container {
             position: relative;
-            width: 550px;
-            height: 550px;
+            width: 700px; /* Increased from 550px */
+            height: 700px;
             margin: 0 auto;
         }
         
@@ -109,8 +114,8 @@
 
         .orbit-item {
             position: absolute;
-            width: 75px;
-            height: 75px;
+            width: 85px; /* Slightly larger */
+            height: 85px;
             background: #F4F1DE;
             border-radius: 50%;
             display: flex;
@@ -156,8 +161,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 320px;
-            height: 320px;
+            width: 450px; /* Increased from 320px */
+            height: 450px;
             background: white;
             border-radius: 50%;
             display: flex;
@@ -165,17 +170,17 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
             z-index: 5;
             transition: all 0.3s ease;
-            border: 1px solid #F4F1DE;
+            border: 4px solid #F4F1DE;
         }
 
-        @media (max-width: 768px) {
-            .timeline-line { left: 24px; }
+        @media (max-width: 850px) {
             .orbit-container { display: none; } 
             .mobile-grid { display: grid; }
+            .timeline-line-vertical { left: 19px; }
         }
     </style>
 </head>
@@ -233,7 +238,7 @@
         </div>
     </header>
 
-    <!-- Pedagogical Framework (Expanded Rationale) -->
+    <!-- Pedagogical Framework -->
     <section id="pedagogy" class="py-24 bg-white relative z-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20">
@@ -246,30 +251,30 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- Pillar 1: Partnerships (Swapped) -->
+                <!-- Pillar 1: Partnerships -->
                 <div class="bg-brand-cream p-10 rounded-3xl border border-brand-primary/10 shadow-sm hover:shadow-xl transition-all duration-300 group">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="p-3 bg-brand-primary rounded-xl text-white group-hover:scale-110 transition-transform"><i data-lucide="handshake"></i></div>
                         <h3 class="font-serif text-2xl font-bold text-brand-dark">Partnerships</h3>
                     </div>
                     <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-                        <strong>Rationale:</strong> The Ottawa Charter emphasizes reorienting health services toward community action. Schools cannot address the climate crisis in isolation; external expertise validates student concerns.
+                        <strong>Rationale:</strong> The <strong>Ottawa Charter for Health Promotion</strong> (WHO, 1986) emphasizes "reorienting health services" toward community action. Schools cannot address the multifaceted crisis of climate change in isolation. By partnering with external experts, we validate student concerns and move learning into the "real world," reducing the sense of isolation that fuels anxiety.
                     </p>
                     <div class="text-xs font-bold text-brand-primary uppercase tracking-wide border-t border-gray-300 pt-4">Project Application</div>
-                    <p class="text-sm text-gray-700 mt-2">Collaboration with <strong>Zoos Victoria</strong> for scientific realism and <strong>Indigenous Elders</strong> for cultural land management knowledge.</p>
+                    <p class="text-sm text-gray-700 mt-2">We collaborate with <strong>Zoos Victoria</strong> to provide scientific realism and <strong>Indigenous Elders</strong> to provide cultural knowledge on land management (Caring for Country).</p>
                 </div>
 
-                <!-- Pillar 2: Student Voice (Swapped) -->
+                <!-- Pillar 2: Student Voice -->
                 <div class="bg-brand-cream p-10 rounded-3xl border border-brand-primary/10 shadow-sm hover:shadow-xl transition-all duration-300 group">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="p-3 bg-brand-dark rounded-xl text-brand-accent group-hover:scale-110 transition-transform"><i data-lucide="mic"></i></div>
                         <h3 class="font-serif text-2xl font-bold text-brand-dark">Student Voice</h3>
                     </div>
                     <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-                        <strong>Rationale:</strong> Research by Hickman et al. (2021) indicates that eco-anxiety is often exacerbated by feelings of powerlessness and institutional betrayal. Giving students a genuine say in school sustainability policy acts as a protective factor.
+                        <strong>Rationale:</strong> <strong>FISO 2.0</strong> explicitly prioritizes "Empowering Student Voice and Agency." Research by Hickman et al. (2021) indicates that eco-anxiety is often exacerbated by feelings of powerlessness and "institutional betrayal." Giving students a genuine say in school sustainability policy acts as a protective factor against this distress.
                     </p>
                     <div class="text-xs font-bold text-brand-primary uppercase tracking-wide border-t border-gray-300 pt-4">Project Application</div>
-                    <p class="text-sm text-gray-700 mt-2">Phase 2 is dedicated to a <strong>Student-Led Pitch</strong>, where students design initiatives that Leadership must formally review.</p>
+                    <p class="text-sm text-gray-700 mt-2">Phase 2 is dedicated to a <strong>Student-Led Pitch</strong>, where students design initiatives that Leadership must formally review, shifting them from passive observers to active change-makers.</p>
                 </div>
 
                 <!-- Pillar 3: HIWS -->
@@ -279,180 +284,232 @@
                         <h3 class="font-serif text-2xl font-bold text-brand-dark">HIWS Integration</h3>
                     </div>
                     <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-                        <strong>Rationale:</strong> Aligned with High Impact Wellbeing Strategies (HIWS), we explicitly teach emotional regulation. We move away from "doom narratives" towards "active hope" (Ojala, 2012).
+                        <strong>Rationale:</strong> Aligned with the Victorian Department of Education's <strong>High Impact Wellbeing Strategies (HIWS)</strong>, we explicitly teach emotional regulation. Ojala (2012) argues that "constructive hope" is essential for engagement. We move away from "doom narratives" towards "active hope" by validating emotions rather than suppressing them.
                     </p>
                     <div class="text-xs font-bold text-brand-primary uppercase tracking-wide border-t border-gray-300 pt-4">Project Application</div>
-                    <p class="text-sm text-gray-700 mt-2">Phase 3 utilizes <strong>Yarning Circles</strong> to provide a culturally safe space for processing grief and anxiety.</p>
+                    <p class="text-sm text-gray-700 mt-2">Phase 3 utilizes <strong>Yarning Circles</strong> to provide a culturally safe space for processing grief and anxiety, directly addressing the "Promote Inclusion" strategy.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Project Timeline (Expanded Detail) -->
+    <!-- Project Timeline (Redesigned Sidebar Style) -->
     <section id="timeline" class="py-24 bg-white relative overflow-hidden border-t border-brand-cream">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
                 <span class="text-brand-primary font-bold tracking-widest uppercase text-xs">10-Hour Delivery Plan</span>
                 <h2 class="font-serif text-4xl font-bold text-brand-dark mt-2">The Three Phases</h2>
             </div>
 
+            <!-- Vertical Timeline Wrapper -->
             <div class="relative">
-                <div class="timeline-line"></div>
+                <div class="timeline-line-vertical"></div>
 
                 <!-- Phase 1 -->
-                <div class="mb-12 flex flex-col md:flex-row items-center w-full group">
-                    <div class="order-2 md:order-1 md:w-5/12 text-left md:text-right md:pr-12 pl-16 md:pl-0 mt-4 md:mt-0">
-                        <h3 class="font-serif text-2xl font-bold text-brand-dark">Phase 1: Global</h3>
-                        <div class="text-brand-primary font-bold text-sm mb-3 uppercase tracking-wide">5 Hours | Excursion & Inquiry</div>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            A real-world investigation at <strong>Zoos Victoria</strong>. Students move beyond textbook theory to witness conservation in action. This phase focuses on "fighting extinction" and understanding the specific threats of biodiversity loss.
+                <div class="relative pl-24 md:pl-32 py-8 group">
+                    <!-- Circle on line -->
+                    <div class="absolute left-0 top-8 w-14 h-14 bg-brand-dark rounded-full border-4 border-brand-cream shadow-lg flex items-center justify-center text-brand-cream font-bold z-10 text-xl">1</div>
+
+                    <!-- Content Content -->
+                    <div class="w-full">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <div>
+                                <h3 class="font-serif text-3xl font-bold text-brand-dark">Phase 1: Global</h3>
+                                <div class="text-brand-primary font-bold text-sm uppercase tracking-wide mt-1">5 Hours | Excursion & Inquiry</div>
+                            </div>
+                            <div class="hidden md:flex items-center gap-2 bg-brand-cream px-4 py-2 rounded-full text-brand-dark text-sm font-bold">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-brand-primary"></i> Zoos Victoria
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6 max-w-4xl">
+                            A real-world investigation at <strong>Zoos Victoria</strong>. Students move beyond textbook theory to witness conservation in action. This phase focuses on "fighting extinction" and understanding the specific threats of biodiversity loss without succumbing to despair.
                         </p>
-                        <button onclick="toggleDetails('p1-details')" class="mt-4 text-brand-dark font-bold text-sm border-b-2 border-brand-accent hover:text-brand-primary transition-colors cursor-pointer">View Key Activities</button>
-                    </div>
-                    
-                    <div class="order-1 md:order-2 md:w-2/12 flex justify-center relative">
-                        <div class="w-14 h-14 bg-brand-cream rounded-full border-4 border-brand-dark shadow-lg flex items-center justify-center text-brand-dark font-bold z-10 text-xl group-hover:bg-brand-dark group-hover:text-brand-accent transition-colors">1</div>
-                    </div>
-                    
-                    <div class="order-3 md:w-5/12 pl-16 md:pl-12 w-full">
-                        <div class="bg-white p-5 rounded-2xl shadow-sm border border-brand-cream hidden md:block">
-                             <div class="flex items-center gap-3 text-brand-dark font-bold"><i data-lucide="map-pin" class="w-5 h-5 text-brand-primary"></i> Zoos Victoria</div>
-                             <p class="text-xs text-gray-500 mt-2">Guided Workshop & Debrief</p>
+                        
+                        <button onclick="toggleDetails('p1-details', this)" class="inline-flex items-center gap-2 bg-white border border-brand-dark/20 px-6 py-2 rounded-lg text-brand-dark font-bold text-sm hover:bg-brand-dark hover:text-white transition-all shadow-sm">
+                            <span>Show Detailed Activities</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+
+                        <!-- Expanded Detail Pane -->
+                        <div id="p1-details" class="hidden mt-8 bg-brand-cream/50 p-8 rounded-2xl border-l-4 border-brand-dark animate-fade-in w-full">
+                            <h4 class="font-bold text-brand-dark border-b border-brand-dark/10 pb-3 mb-4 text-lg">Detailed Activity Breakdown</h4>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <strong class="block text-brand-dark mb-2">Structure & Content</strong>
+                                    <ul class="list-disc list-inside text-gray-700 text-sm space-y-3">
+                                        <li><strong>Zoo Workshop (3 hrs):</strong> An expert-led session focusing on local threatened species (e.g., Leadbeater's Possum). Students examine successful conservation case studies to build a foundation of hope and efficacy.</li>
+                                        <li><strong>Debrief (2 hrs):</strong> A structured classroom session held post-excursion. Students use a "Head, Heart, Hand" reflection model to link the scientific data (Head) to their personal emotional response (Heart) and potential actions (Hand).</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <strong class="block text-brand-dark mb-2">Pedagogical Links</strong>
+                                    <ul class="list-disc list-inside text-gray-700 text-sm space-y-3">
+                                        <li><strong>HIWS Focus:</strong> "Building Positive School Environments" by taking learning outside the classroom and fostering peer connection in nature.</li>
+                                        <li><strong>Resources:</strong> Zoo Educator Guides, Species Impact Data Sheets.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div id="p1-details" class="hidden bg-brand-cream/50 p-8 rounded-2xl shadow-inner mb-20 mx-4 border-l-4 border-brand-dark animate-fade-in relative z-20">
-                    <h4 class="font-bold text-brand-dark border-b border-brand-dark/10 pb-3 mb-4">Detailed Activity Breakdown</h4>
-                    <ul class="list-disc list-inside text-gray-700 text-sm grid md:grid-cols-2 gap-4">
-                        <li><strong>Zoo Workshop (3 hrs):</strong> Expert-led session on local threatened species.</li>
-                        <li><strong>Debrief (2 hrs):</strong> Classroom session linking scientific data to personal emotion.</li>
-                        <li><strong>HIWS Focus:</strong> Building Positive School Environments by taking learning outside.</li>
-                    </ul>
                 </div>
 
                 <!-- Phase 2 -->
-                <div class="mb-12 flex flex-col md:flex-row items-center w-full group">
-                    <div class="order-2 md:order-1 md:w-5/12 text-right pr-12 hidden md:block">
-                        <div class="bg-white p-5 rounded-2xl shadow-sm border border-brand-cream">
-                             <div class="flex items-center justify-end gap-3 text-brand-dark font-bold">Classroom Intensive <i data-lucide="users" class="w-5 h-5 text-brand-primary"></i></div>
-                             <p class="text-xs text-gray-500 mt-2">Group Collaboration & Leadership Pitch</p>
+                <div class="relative pl-24 md:pl-32 py-8 group">
+                    <div class="absolute left-0 top-8 w-14 h-14 bg-brand-primary rounded-full border-4 border-brand-cream shadow-lg flex items-center justify-center text-white font-bold z-10 text-xl">2</div>
+
+                    <div class="w-full">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <div>
+                                <h3 class="font-serif text-3xl font-bold text-brand-dark">Phase 2: Communal</h3>
+                                <div class="text-brand-primary font-bold text-sm uppercase tracking-wide mt-1">3 Hours | In-Class Intensive</div>
+                            </div>
+                            <div class="hidden md:flex items-center gap-2 bg-brand-cream px-4 py-2 rounded-full text-brand-dark text-sm font-bold">
+                                <i data-lucide="users" class="w-4 h-4 text-brand-primary"></i> Classroom
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="order-1 md:order-2 md:w-2/12 flex justify-center relative">
-                        <div class="w-14 h-14 bg-brand-cream rounded-full border-4 border-brand-primary shadow-lg flex items-center justify-center text-brand-primary font-bold z-10 text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors">2</div>
-                    </div>
-                    
-                    <div class="order-3 md:order-3 md:w-5/12 pl-16 md:pl-12 w-full text-left mt-4 md:mt-0">
-                        <h3 class="font-serif text-2xl font-bold text-brand-dark">Phase 2: Communal</h3>
-                        <div class="text-brand-primary font-bold text-sm mb-3 uppercase tracking-wide">3 Hours | In-Class Intensive</div>
-                        <p class="text-gray-600 text-sm leading-relaxed">
+                        
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6 max-w-4xl">
                             Transforming anxiety into agency. Students form committees to design a tangible <strong>School Climate Initiative</strong> (e.g., waste audit, green energy proposal) and pitch it to school leadership.
                         </p>
-                        <button onclick="toggleDetails('p2-details')" class="mt-4 text-brand-dark font-bold text-sm border-b-2 border-brand-accent hover:text-brand-primary transition-colors cursor-pointer">View Key Activities</button>
-                    </div>
-                </div>
+                        
+                        <button onclick="toggleDetails('p2-details', this)" class="inline-flex items-center gap-2 bg-white border border-brand-primary/30 px-6 py-2 rounded-lg text-brand-primary font-bold text-sm hover:bg-brand-primary hover:text-white transition-all shadow-sm">
+                            <span>Show Detailed Activities</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
 
-                <div id="p2-details" class="hidden bg-brand-cream/50 p-8 rounded-2xl shadow-inner mb-20 mx-4 border-l-4 border-brand-primary animate-fade-in relative z-20">
-                    <h4 class="font-bold text-brand-primary border-b border-brand-primary/10 pb-3 mb-4">Detailed Activity Breakdown (3 Hours)</h4>
-                    <ul class="list-disc list-inside text-gray-700 text-sm grid md:grid-cols-2 gap-4">
-                        <li><strong>Problem ID (1 hr):</strong> Small groups identify a local school issue (waste/energy/biodiversity).</li>
-                        <li><strong>Solution Design (1 hr):</strong> Developing a pitch deck/proposal based on research.</li>
-                        <li><strong>The Pitch (1 hr):</strong> Presentation to Principal/Leadership Team (Student Voice).</li>
-                        <li><strong>HIWS Focus:</strong> Empowering Student Voice & Agency.</li>
-                    </ul>
+                        <div id="p2-details" class="hidden mt-8 bg-brand-cream/50 p-8 rounded-2xl border-l-4 border-brand-primary animate-fade-in w-full">
+                            <h4 class="font-bold text-brand-primary border-b border-brand-primary/10 pb-3 mb-4 text-lg">Detailed Activity Breakdown</h4>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <strong class="block text-brand-primary mb-2">Structure & Content</strong>
+                                    <ul class="list-disc list-inside text-gray-700 text-sm space-y-3">
+                                        <li><strong>Problem ID (1 hr):</strong> In small "Action Committees," students conduct a mini-audit of the school to identify one actionable issue (e.g., canteen waste, energy use, biodiversity).</li>
+                                        <li><strong>Solution Design (1 hr):</strong> Students research viable solutions and draft a "Pitch Deck" that includes cost, implementation steps, and expected impact.</li>
+                                        <li><strong>The Pitch (1 hr):</strong> A culminating event where groups present their proposals to the Principal or School Council.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <strong class="block text-brand-primary mb-2">Pedagogical Links</strong>
+                                    <ul class="list-disc list-inside text-gray-700 text-sm space-y-3">
+                                        <li><strong>HIWS Focus:</strong> "Empowering Student Voice & Agency" by providing a platform for genuine decision-making.</li>
+                                        <li><strong>Outcome:</strong> The winning proposal receives funding/support for implementation.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Phase 3 -->
-                <div class="mb-12 flex flex-col md:flex-row items-center w-full group">
-                    <div class="order-2 md:order-1 md:w-5/12 text-left md:text-right md:pr-12 pl-16 md:pl-0 mt-4 md:mt-0">
-                        <h3 class="font-serif text-2xl font-bold text-brand-dark">Phase 3: Personal</h3>
-                        <div class="text-brand-primary font-bold text-sm mb-3 uppercase tracking-wide">2+ Hours | Camp Setting</div>
-                        <p class="text-gray-600 text-sm leading-relaxed">
+                <div class="relative pl-24 md:pl-32 py-8 group">
+                    <div class="absolute left-0 top-8 w-14 h-14 bg-brand-accent rounded-full border-4 border-brand-cream shadow-lg flex items-center justify-center text-brand-dark font-bold z-10 text-xl">3</div>
+
+                    <div class="w-full">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <div>
+                                <h3 class="font-serif text-3xl font-bold text-brand-dark">Phase 3: Personal</h3>
+                                <div class="text-brand-primary font-bold text-sm uppercase tracking-wide mt-1">2+ Hours | Camp Setting</div>
+                            </div>
+                            <div class="hidden md:flex items-center gap-2 bg-brand-cream px-4 py-2 rounded-full text-brand-dark text-sm font-bold">
+                                <i data-lucide="tent" class="w-4 h-4 text-brand-primary"></i> School Camp
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6 max-w-4xl">
                             <strong>Connection to Country:</strong> Situated on camp, students engage with Indigenous Elders to understand historical land care. They complete the "Resilience Workbook" to process their emotions.
                         </p>
-                        <button onclick="toggleDetails('p3-details')" class="mt-4 text-brand-dark font-bold text-sm border-b-2 border-brand-accent hover:text-brand-primary transition-colors cursor-pointer">View Key Activities</button>
-                    </div>
-                    
-                    <div class="order-1 md:order-2 md:w-2/12 flex justify-center relative">
-                        <div class="w-14 h-14 bg-brand-cream rounded-full border-4 border-brand-accent shadow-lg flex items-center justify-center text-brand-dark font-bold z-10 text-xl group-hover:bg-brand-accent group-hover:text-brand-dark transition-colors">3</div>
-                    </div>
-                    
-                    <div class="order-3 md:w-5/12 pl-16 md:pl-12 w-full">
-                        <div class="bg-white p-5 rounded-2xl shadow-sm border border-brand-cream hidden md:block">
-                             <div class="flex items-center gap-3 text-brand-dark font-bold"><i data-lucide="tent" class="w-5 h-5 text-brand-primary"></i> Camp Location</div>
-                             <p class="text-xs text-gray-500 mt-2">Yarning Circles & Reflection</p>
+                        
+                        <button onclick="toggleDetails('p3-details', this)" class="inline-flex items-center gap-2 bg-white border border-brand-accent px-6 py-2 rounded-lg text-brand-dark font-bold text-sm hover:bg-brand-accent hover:text-brand-dark transition-all shadow-sm">
+                            <span>Show Detailed Activities</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+
+                        <div id="p3-details" class="hidden mt-8 bg-brand-cream/50 p-8 rounded-2xl border-l-4 border-brand-accent animate-fade-in w-full">
+                            <h4 class="font-bold text-brand-dark border-b border-brand-dark/10 pb-3 mb-4 text-lg">Detailed Activity Breakdown</h4>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <strong class="block text-brand-dark mb-2">Structure & Content</strong>
+                                    <ul class="list-disc list-inside text-gray-700 text-sm space-y-3">
+                                        <li><strong>Elders Workshop (1 hr):</strong> A "Caring for Country" session led by First Nations custodians, focusing on sustainable land management and spiritual connection to place.</li>
+                                        <li><strong>Yarning Circles (45 mins):</strong> Students participate in guided Yarning Circles. The focus is on respectful listening and sharing feelings about the future without judgment.</li>
+                                        <li><strong>Workbook (45 mins):</strong> Completion of the "My Climate Resilience" journal.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <strong class="block text-brand-dark mb-2">Pedagogical Links</strong>
+                                    <ul class="list-disc list-inside text-gray-700 text-sm space-y-3">
+                                        <li><strong>HIWS Focus:</strong> "Promote Inclusion" by centering Indigenous perspectives and creating culturally safe spaces.</li>
+                                        <li><strong>Key Tool:</strong> Personal Coping Strategy Map.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div id="p3-details" class="hidden bg-brand-cream/50 p-8 rounded-2xl shadow-inner mb-8 mx-4 border-l-4 border-brand-accent animate-fade-in relative z-20">
-                    <h4 class="font-bold text-brand-dark border-b border-brand-dark/10 pb-3 mb-4">Detailed Activity Breakdown (2+ Hours)</h4>
-                    <ul class="list-disc list-inside text-gray-700 text-sm grid md:grid-cols-2 gap-4">
-                        <li><strong>Elders Workshop (1 hr):</strong> Learning sustainable land management from First Nations custodians.</li>
-                        <li><strong>Yarning Circles (45 mins):</strong> Safe spaces for emotional processing and storytelling.</li>
-                        <li><strong>Workbook (45 mins):</strong> Completion of "My Climate Resilience" reflection journal.</li>
-                        <li><strong>HIWS Focus:</strong> Promoting Inclusion & Cultural Safety.</li>
-                    </ul>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Interactive Curriculum Web -->
+    <!-- Interactive Curriculum Web (Expanded) -->
     <section id="curriculum" class="py-24 bg-white border-t border-brand-cream">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="font-serif text-4xl font-bold text-brand-dark mb-4 text-center">Curriculum Alignment</h2>
             <p class="text-center text-gray-500 mb-16">Explore how the program maps to the Victorian Curriculum (Year 10).</p>
             
-            <!-- Desktop Orbit Interaction -->
+            <!-- Desktop Orbit Interaction - UPDATED SIZE -->
             <div class="orbit-container hidden md:block">
                 <div class="orbit-track"></div>
                 
                 <!-- Central Core -->
                 <div class="core-content" id="core-display">
-                    <h3 class="font-serif text-2xl font-bold text-brand-dark mb-2">VCAA Year 10</h3>
-                    <p class="text-gray-500 text-sm">Click the surrounding subjects to see specific content descriptors and project connections.</p>
+                    <h3 class="font-serif text-3xl font-bold text-brand-dark mb-3">VCAA Year 10</h3>
+                    <p class="text-gray-500 text-lg">Click the surrounding subjects to see specific content descriptors and project connections.</p>
                 </div>
 
                 <!-- Planets -->
                 <button class="orbit-item planet-1 group" onclick="updateCore('science', this)">
-                    <i data-lucide="flask-conical"></i>
-                    <span class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-xs font-bold text-brand-primary">Science</span>
+                    <i data-lucide="flask-conical" class="w-6 h-6"></i>
+                    <span class="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-sm font-bold text-brand-primary">Science</span>
                 </button>
                 <button class="orbit-item planet-2 group" onclick="updateCore('humanities', this)">
-                    <i data-lucide="globe-2"></i>
-                    <span class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-xs font-bold text-brand-primary">Humanities</span>
+                    <i data-lucide="globe-2" class="w-6 h-6"></i>
+                    <span class="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-sm font-bold text-brand-primary">Humanities</span>
                 </button>
                 <button class="orbit-item planet-3 group" onclick="updateCore('personal', this)">
-                    <i data-lucide="brain-circuit"></i>
-                    <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-xs font-bold text-brand-primary w-32 text-center">Personal & Social</span>
+                    <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+                    <span class="absolute -bottom-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-sm font-bold text-brand-primary w-40 text-center">Personal & Social</span>
                 </button>
                 <button class="orbit-item planet-4 group" onclick="updateCore('creative', this)">
-                    <i data-lucide="lightbulb"></i>
-                    <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-xs font-bold text-brand-primary w-32 text-center">Creative Thinking</span>
+                    <i data-lucide="lightbulb" class="w-6 h-6"></i>
+                    <span class="absolute -bottom-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-sm font-bold text-brand-primary w-40 text-center">Creative Thinking</span>
                 </button>
                 <button class="orbit-item planet-5 group" onclick="updateCore('cross', this)">
-                    <i data-lucide="infinity"></i>
-                    <span class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-xs font-bold text-brand-primary w-40 text-center">Cross-Curriculum</span>
+                    <i data-lucide="infinity" class="w-6 h-6"></i>
+                    <span class="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-sm font-bold text-brand-primary w-40 text-center">Cross-Curriculum</span>
                 </button>
             </div>
 
             <!-- Mobile List (Fallback) -->
-            <div class="mobile-grid grid-cols-1 gap-4 md:hidden">
-                <div class="bg-brand-cream p-6 rounded-xl border border-brand-primary/20">
-                    <div class="flex items-center gap-3 mb-2 font-bold text-brand-dark"><i data-lucide="flask-conical"></i> Science</div>
-                    <p class="text-sm text-gray-700"><strong>Focus:</strong> Global systems (carbon cycle), ecosystems, biodiversity, and conservation data.</p>
+            <div class="mobile-grid grid-cols-1 gap-6 md:hidden">
+                <div class="bg-brand-cream p-8 rounded-2xl border border-brand-primary/20">
+                    <div class="flex items-center gap-3 mb-3 font-bold text-brand-dark text-lg"><i data-lucide="flask-conical"></i> Science</div>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-3"><strong>VCSSU128:</strong> Global systems, including the carbon cycle...<br><strong>VCSSU121:</strong> Ecosystems consist of communities of interdependent organisms...</p>
+                    <div class="text-xs font-bold text-brand-primary uppercase tracking-wide">Project Connection</div>
+                    <p class="text-sm text-gray-600 mt-1">Zoos Victoria 'Fighting Extinction' inquiry trail and species data analysis.</p>
                 </div>
-                <div class="bg-brand-cream p-6 rounded-xl border border-brand-primary/20">
-                    <div class="flex items-center gap-3 mb-2 font-bold text-brand-dark"><i data-lucide="globe-2"></i> Humanities</div>
-                    <p class="text-sm text-gray-700"><strong>Focus:</strong> Environmental change management, civic participation, and government roles.</p>
+                <div class="bg-brand-cream p-8 rounded-2xl border border-brand-primary/20">
+                    <div class="flex items-center gap-3 mb-3 font-bold text-brand-dark text-lg"><i data-lucide="globe-2"></i> Humanities</div>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-3"><strong>VCGGK145:</strong> Environmental change and management.<br><strong>VCCCC036:</strong> Civic participation and the role of government.</p>
+                    <div class="text-xs font-bold text-brand-primary uppercase tracking-wide">Project Connection</div>
+                    <p class="text-sm text-gray-600 mt-1">Analysis of school policy and the 'Climate Pitch' assessment.</p>
                 </div>
-                <div class="bg-brand-cream p-6 rounded-xl border border-brand-primary/20">
-                    <div class="flex items-center gap-3 mb-2 font-bold text-brand-dark"><i data-lucide="brain-circuit"></i> Personal & Social</div>
-                    <p class="text-sm text-gray-700"><strong>Focus:</strong> Self-awareness, emotional regulation, empathy, and collaboration.</p>
+                <div class="bg-brand-cream p-8 rounded-2xl border border-brand-primary/20">
+                    <div class="flex items-center gap-3 mb-3 font-bold text-brand-dark text-lg"><i data-lucide="brain-circuit"></i> Personal & Social</div>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-3"><strong>VCPSCSE052:</strong> Develop self-awareness and management.<br><strong>VCPSCSO053:</strong> Social awareness (empathy) and relationship skills.</p>
+                    <div class="text-xs font-bold text-brand-primary uppercase tracking-wide">Project Connection</div>
+                    <p class="text-sm text-gray-600 mt-1">Managing 'eco-anxiety' via Yarning Circles and the Resilience Workbook.</p>
                 </div>
             </div>
         </div>
@@ -507,12 +564,18 @@
         lucide.createIcons();
 
         // Toggle Details Function
-        function toggleDetails(id) {
+        function toggleDetails(id, btn) {
             const el = document.getElementById(id);
+            const icon = btn.querySelector('i');
+            
             if (el.classList.contains('hidden')) {
                 el.classList.remove('hidden');
+                btn.querySelector('span').innerText = "Hide Details";
+                icon.classList.add('rotate-180');
             } else {
                 el.classList.add('hidden');
+                btn.querySelector('span').innerText = "Show Detailed Activities";
+                icon.classList.remove('rotate-180');
             }
         }
 
@@ -520,27 +583,27 @@
         const curriculumData = {
             science: {
                 title: "Science (Year 10)",
-                desc: "<strong>Content Focus:</strong> Global systems (carbon cycle), ecosystems, biodiversity, and conservation data.",
+                desc: "<strong>VCSSU128:</strong> Global systems, including the carbon cycle...<br><strong>VCSSU121:</strong> Ecosystems consist of communities of interdependent organisms...",
                 connect: "<strong>Project Link:</strong> Zoos Victoria 'Fighting Extinction' inquiry trail and species data analysis."
             },
             humanities: {
                 title: "Humanities (Geography & Civics)",
-                desc: "<strong>Content Focus:</strong> Geographies of human wellbeing, environmental change management, civic participation.",
+                desc: "<strong>VCGGK145:</strong> Environmental change and management.<br><strong>VCCCC036:</strong> Civic participation and the role of government.",
                 connect: "<strong>Project Link:</strong> Analysis of school policy and the 'Climate Pitch' assessment."
             },
             personal: {
                 title: "Personal & Social Capability",
-                desc: "<strong>Content Focus:</strong> Self-awareness, emotional regulation, empathy, and collaboration.",
+                desc: "<strong>VCPSCSE052:</strong> Develop self-awareness and management.<br><strong>VCPSCSO053:</strong> Social awareness (empathy) and relationship skills.",
                 connect: "<strong>Project Link:</strong> Managing 'eco-anxiety' via Yarning Circles and the Resilience Workbook."
             },
             creative: {
                 title: "Critical & Creative Thinking",
-                desc: "<strong>Content Focus:</strong> Questions, possibilities, and reasoning.",
+                desc: "<strong>VCCCTQ051:</strong> Questions and Possibilities.<br><strong>VCCCTR052:</strong> Reasoning (Meta-cognition).",
                 connect: "<strong>Project Link:</strong> Generating novel solutions for the Phase 2 Pitch (e.g., waste solutions)."
             },
             cross: {
                 title: "Cross-Curriculum Priorities",
-                desc: "<strong>Focus:</strong> Sustainability + Aboriginal & Torres Strait Islander Histories and Cultures.",
+                desc: "<strong>Sustainability:</strong> Futures-oriented thinking.<br><strong>Aboriginal & Torres Strait Islander Histories:</strong> Connection to Country.",
                 connect: "<strong>Project Link:</strong> Embedded in all phases, specifically the Elders Workshop on Camp."
             }
         };
@@ -559,12 +622,12 @@
             
             setTimeout(() => {
                 core.innerHTML = `
-                    <div class="w-12 h-12 bg-brand-primary rounded-full flex items-center justify-center text-white mb-3">
-                        ${btnElement.innerHTML.split('<span')[0]}
+                    <div class="w-14 h-14 bg-brand-primary rounded-full flex items-center justify-center text-white mb-4">
+                        ${btnElement.innerHTML.split('<span')[0].replace('w-6', 'w-8').replace('h-6', 'h-8')}
                     </div>
-                    <h3 class="font-serif text-xl font-bold text-brand-dark mb-2 leading-tight">${data.title}</h3>
-                    <p class="text-gray-600 text-sm mb-3 leading-relaxed">${data.desc}</p>
-                    <div class="text-xs bg-brand-cream border border-brand-primary/20 px-3 py-2 rounded-lg text-brand-dark">${data.connect}</div>
+                    <h3 class="font-serif text-2xl font-bold text-brand-dark mb-4 leading-tight">${data.title}</h3>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed max-w-sm">${data.desc}</p>
+                    <div class="text-sm bg-brand-cream border border-brand-primary/20 px-6 py-3 rounded-lg text-brand-dark">${data.connect}</div>
                 `;
                 core.style.opacity = "1";
                 core.style.transform = "translate(-50%, -50%) scale(1)";
